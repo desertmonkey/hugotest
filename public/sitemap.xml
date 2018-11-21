@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://docs.cumulusnetworks.com/cumulus-linux/system-configuration/nclu/</loc>
+    <lastmod>2018-11-08T12:37:48-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.cumulusnetworks.com/cumulus-linux/quick-start-guide/</loc>
+    <lastmod>2018-11-08T10:54:54-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.cumulusnetworks.com/cumulus-linux/</loc>
+    <lastmod>2018-11-08T10:53:27-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.cumulusnetworks.com/cumulus-linux/system-configuration/switchd/</loc>
+    <lastmod>2018-11-08T12:50:55-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.cumulusnetworks.com/_footer/</loc>
+    <lastmod>2018-11-08T15:58:02-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.cumulusnetworks.com/netq/</loc>
+    <lastmod>2018-11-08T12:30:03-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.cumulusnetworks.com/cumulus-linux/system-configuration/</loc>
+    <lastmod>2018-11-08T12:25:18-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.cumulusnetworks.com/_header/</loc>
+    <lastmod>2018-11-08T11:15:12-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.cumulusnetworks.com/</loc>
+    <lastmod>2018-11-08T10:46:46-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.cumulusnetworks.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://docs.cumulusnetworks.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

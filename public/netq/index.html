@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cumulus Networks Documentation</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.34" />
+<title>NetQ :: Cumulus Networks Documentation</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "http:\/\/docs.cumulusnetworks.com\/";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/netq/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><img src="https://cumulusnetworks.com/static/images/shared/cumulus-networks-logo-white.svg" alt="Cumulus Networks logo" /></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://cumulusnetworks.com/downloads/"  rel="noopener">
+                  Downloads
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://forums.cumulusnetworks.com/"  rel="noopener">
+                  Forums
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://support.cumulusnetworks.com/hc/en-us"  rel="noopener">
+                  Knowledge Base & Support
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://cumulusnetworks.com/"  rel="noopener">
+                  CumulusNetworks.com
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/cumulus-linux/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/cumulus-linux/">Cumulus Linux</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/cumulus-linux/quick-start-guide/" class="dd-item
+        ">
+      <div>
+      <a href="/cumulus-linux/quick-start-guide/">Quick Start Guide</a>
+      </div>
+    </li>
+    <li data-nav-id="/cumulus-linux/system-configuration/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/cumulus-linux/system-configuration/">System Configuration</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/cumulus-linux/system-configuration/nclu/" class="dd-item">
+        <div>
+          <a href="/cumulus-linux/system-configuration/nclu/">
+            NCLU Network Command Line Utility
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/cumulus-linux/system-configuration/switchd/" class="dd-item">
+        <div>
+          <a href="/cumulus-linux/system-configuration/switchd/">
+            switchd
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/netq/" class="dd-item parent active
+        ">
+      <div>
+      <a href="/netq/">NetQ</a>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/cumulus-linux/" >
+   Cumulus Linux</option>
+    <option value="/netq/"  selected>
+   NetQ</option> 
+  
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "http:\/\/docs.cumulusnetworks.com\/";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>NetQ</h1>
+    
+    
+    
+
+<p>Cumulus® NetQ is a network operations tool set that provides actionable insight into and operational intelligence about the health of the entire Linux-based data center — from the container, virtual machine, or host, all the way to the switch and port. Working hand-in-hand with Cumulus Linux, NetQ enables organizations to validate network state, both during regular operations and for post-mortem diagnostic analysis. Running on Cumulus Linux switches and other certified systems — such as Ubuntu®, Red Hat®, and CentOS hosts — NetQ captures network data and other state information in real time, providing cloud architects and network operations teams the ability to operate with visibility into the entire network. It is integrated with container orchestrators and the Netlink interface to make this happen. With NetQ, network operations changes from a manual, reactive, box-by-box approach to an automated, informed and agile one.</p>
+
+<p>The system uses a three-pronged approach to validating networks:</p>
+
+<ul>
+<li>Preventative Validation: NetQ easily validates potential network configuration changes in a virtualized environment or lab using check, show and trace algorithms. NetQ eliminates the need to check switches or servers one by one and can reduce manual errors before they are rolled into production (one of the main causes of network downtime).</li>
+<li>Proactive Alerting: NetQ detects faulty network states that can result in packet loss or connectivity issues, and alerts the user with precise fault location data for faster remediation, greatly improving network agility and reducing downtime costs.</li>
+<li>Diagnostic Troubleshooting: NetQ provides the ability to trace network paths, replay the network state at a time in the past, review fabric-wide event change logs, and diagnose the root cause of state deviations.</li>
+</ul>
+
+<p>NetQ also offers Image and Provisioning Management (IPM), which makes it possible to get your new Cumulus Linux switches up and running quickly by providing bootstrapping and lifecycle management capabilities, including image and ZTP configuration management. IPM contains local storage and distribution services for the Cumulus Linux network operating system (NOS) and provisioning scripts used to deploy and upgrade Cumulus Linux and NetQ. With IPM, network deployment changes from a tedious box-by-box installation process to a consistent and predictable one.</p>
+
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/cumulus-linux/system-configuration/switchd/" title="switchd"> <i class="fa fa-chevron-left"></i><label>switchd</label></a>
+    <a class="nav nav-next" href="/cumulus-linux/" title="Cumulus Linux" style="margin-right: 0px;"><label>Cumulus Linux</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 08/11/2018
+    </div>
+    
+
+    
+  </div>
+
+
+	<div>
+
+
+  
+    <hr />
+
+<p><a href="//CumulusNetworks.com/"><img src="https://cumulusnetworks.com/static/images/shared/cumulus-networks-logo-gray-dark.svg" width="200"></a></p>
+
+<p>© <script type="text/javascript">document.write(new Date().getFullYear());</script> Cumulus Networks.<br>Bringing web-scale networking to the enterprise cloud.</p>
+
+<table>
+<thead>
+<tr>
+<th>Products</th>
+<th>Learn</th>
+<th>About</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a href="https://cumulusnetworks.com/products/cumulus-linux/">Cumulus Linux</a><br /><a href="https://cumulusnetworks.com/products/netq/">NetQ</a><br /><a href="https://cumulusnetworks.com/products/host-pack">Host Pack</a><br /><a href="https://cumulusnetworks.com/products/cumulus-express">Cumulus Express</a> <br />&nbsp;</td>
+<td><a href="https://cumulusnetworks.com/learn/web-scale-networking-education/">Going web-scale</a><br /><a href="https://cumulusnetworks.com/learn/events/">Events</a><br /> <a href="https://cumulusnetworks.com/blog/">Blog</a><br />&nbsp;<br />&nbsp;</td>
+<td><a href="https://cumulusnetworks.com/about/">Our story</a><br /><a href="https://cumulusnetworks.com/about/careers/">Careers</a><br /><a href="https://cumulusnetworks.com/about/media-coverage/">Media coverage</a><br /><a href="http://docs.cumulusnetworks.com/">Tech docs</a><br /><a href="https://cumulusnetworks.com/community/">Community</a></td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="//twitter.com/CumulusNetworks/"><img src="https://cumulusnetworks.com/static/images/icons/hexagon-twitter.png" width="32"></a> ・ <a href="//www.facebook.com/CumulusNetworks/"><img src="https://cumulusnetworks.com/static/images/icons/hexagon-facebook.png" width="32"></a> ・ <a href="//linkedin.com/company/cumulus-networks/"><img src="https://cumulusnetworks.com/static/images/icons/hexagon-linkedin.png" width="32"></a> ・ <a href="//vimeo.com/CumulusNetworks/"><img src="https://cumulusnetworks.com/static/images/icons/hexagon-vimeo.png" width="32"></a> ・ <a href="//www.github.com/cumulusnetworks/"><img src="https://cumulusnetworks.com/static/images/icons/hexagon-git.png" width="32"></a> ・ <a href="//slack.cumulusnetworks.com/"><img src="https://cumulusnetworks.com/static/images/icons/hexagon-slack.png" width="32"></a></p>
+
+<hr />
+
+<p><a href="https://cumulusnetworks.com/legal/trademarks/">Trademarks</a> ・ <a href="https://cumulusnetworks.com/legal/privacy/">Privacy</a> ・ <a href="https://cumulusnetworks.com/legal/">Terms of service</a></p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

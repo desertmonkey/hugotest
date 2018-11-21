@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation on Cumulus Networks Documentation</title>
+    <link>http://docs.cumulusnetworks.com/</link>
+    <description>Recent content in Documentation on Cumulus Networks Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Nov 2018 10:46:46 -0800</lastBuildDate>
+    
+	<atom:link href="http://docs.cumulusnetworks.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NCLU Network Command Line Utility</title>
+      <link>http://docs.cumulusnetworks.com/cumulus-linux/system-configuration/nclu/</link>
+      <pubDate>Thu, 08 Nov 2018 12:37:48 -0800</pubDate>
+      
+      <guid>http://docs.cumulusnetworks.com/cumulus-linux/system-configuration/nclu/</guid>
+      <description>The Network Command Line Utility (NCLU) is a command line interface for Cumulus Networks products that simplifies the networking configuration process for all users.
+NCLU resides in the Linux user space and provides consistent access to networking commands directly through bash, making configuration and troubleshooting simple and easy; no need to edit files or enter modes and sub-modes. NCLU:
+ Embeds help, examples, and automatic command checking with suggestions in case you enter a typo.</description>
+    </item>
+    
+    <item>
+      <title>switchd</title>
+      <link>http://docs.cumulusnetworks.com/cumulus-linux/system-configuration/switchd/</link>
+      <pubDate>Thu, 08 Nov 2018 12:50:55 -0800</pubDate>
+      
+      <guid>http://docs.cumulusnetworks.com/cumulus-linux/system-configuration/switchd/</guid>
+      <description>switchd is the daemon at the heart of Cumulus Linux. It communicates between the switch and Cumulus Linux, and all the applications running on Cumulus Linux.
+The switchd configuration is stored in /etc/cumulus/switchd.conf.
+The switchd File System switchd also exports a file system, mounted on /cumulus/switchd, that presents all the switchd configuration options as a series of files arranged in a tree structure. You can see the contents by parsing the switchd tree; run tree /cumulus/switchd.</description>
+    </item>
+    
+    <item>
+      <title>Footer</title>
+      <link>http://docs.cumulusnetworks.com/_footer/</link>
+      <pubDate>Thu, 08 Nov 2018 15:58:02 -0800</pubDate>
+      
+      <guid>http://docs.cumulusnetworks.com/_footer/</guid>
+      <description>© document.write(new Date().getFullYear()); Cumulus Networks.
+Bringing web-scale networking to the enterprise cloud.
+   Products Learn About     Cumulus Linux
+NetQ
+Host Pack
+Cumulus Express &amp;nbsp; Going web-scale
+Events
+Blog
+&amp;nbsp;
+&amp;nbsp; Our story
+Careers
+Media coverage
+Tech docs
+Community     ・  ・  ・  ・  ・ 
+Trademarks ・ Privacy ・ Terms of service</description>
+    </item>
+    
+    <item>
+      <title>Header</title>
+      <link>http://docs.cumulusnetworks.com/_header/</link>
+      <pubDate>Thu, 08 Nov 2018 11:15:12 -0800</pubDate>
+      
+      <guid>http://docs.cumulusnetworks.com/_header/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+baseURL = "http://docs.cumulusnetworks.com/"
+languageCode = "en-us"
+title = "Cumulus Networks Documentation"
+theme = "docdock"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[[menu.shortcuts]]
+name = "Downloads"
+identifier = "downloads"
+url = "https://cumulusnetworks.com/downloads/"
+weight = 1
+
+[[menu.shortcuts]]
+name = "Forums"
+identifier = "community"
+url = "https://forums.cumulusnetworks.com/"
+weight = 2
+
+[[menu.shortcuts]]
+name = "Knowledge Base & Support"
+identifier = "KB"
+url = "https://support.cumulusnetworks.com/hc/en-us"
+weight = 3
+
+[[menu.shortcuts]]
+name = "CumulusNetworks.com"
+identifier = "home"
+url = "https://cumulusnetworks.com/"
+weight = 4
+

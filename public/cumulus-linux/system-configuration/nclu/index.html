@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cumulus Networks Documentation</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.34" />
+<title>NCLU Network Command Line Utility :: Cumulus Networks Documentation</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "http:\/\/docs.cumulusnetworks.com\/";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/cumulus-linux/system-configuration/nclu/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><img src="https://cumulusnetworks.com/static/images/shared/cumulus-networks-logo-white.svg" alt="Cumulus Networks logo" /></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://cumulusnetworks.com/downloads/"  rel="noopener">
+                  Downloads
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://forums.cumulusnetworks.com/"  rel="noopener">
+                  Forums
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://support.cumulusnetworks.com/hc/en-us"  rel="noopener">
+                  Knowledge Base & Support
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://cumulusnetworks.com/"  rel="noopener">
+                  CumulusNetworks.com
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/cumulus-linux/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/cumulus-linux/">Cumulus Linux</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/cumulus-linux/quick-start-guide/" class="dd-item
+        ">
+      <div>
+      <a href="/cumulus-linux/quick-start-guide/">Quick Start Guide</a>
+      </div>
+    </li>
+    <li data-nav-id="/cumulus-linux/system-configuration/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/cumulus-linux/system-configuration/">System Configuration</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/cumulus-linux/system-configuration/nclu/" class="dd-item active">
+        <div>
+          <a href="/cumulus-linux/system-configuration/nclu/">
+            NCLU Network Command Line Utility
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/cumulus-linux/system-configuration/switchd/" class="dd-item">
+        <div>
+          <a href="/cumulus-linux/system-configuration/switchd/">
+            switchd
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/netq/" class="dd-item
+        ">
+      <div>
+      <a href="/netq/">NetQ</a>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/cumulus-linux/" >
+   Cumulus Linux</option> 
+    <option value="/cumulus-linux/quick-start-guide/" >
+  - 
+   Quick Start Guide</option>
+    <option value="/cumulus-linux/system-configuration/" >
+  - 
+   System Configuration</option> 
+      <option value="/cumulus-linux/system-configuration/nclu/"  selected>-- NCLU Network Command Line Utility</option>
+      <option value="/cumulus-linux/system-configuration/switchd/" >-- switchd</option>
+  
+  
+    <option value="/netq/" >
+   NetQ</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "http:\/\/docs.cumulusnetworks.com\/";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>NCLU Network Command Line Utility</h1>
+    
+    
+    
+<aside>
+    <header>
+    <h2>NCLU Network Command Line Utility</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#install-nclu">Install NCLU</a></li>
+<li><a href="#nclu-basics">NCLU Basics</a>
+<ul>
+<li><a href="#tab-completion-verification-and-inline-help">Tab Completion, Verification, and Inline Help</a></li>
+<li><a href="#add-question-mark-ability-to-nclu">Add ? (Question Mark) Ability to NCLU</a></li>
+<li><a href="#built-in-examples">Built-In Examples</a></li>
+</ul></li>
+<li><a href="#configure-user-accounts">Configure User Accounts</a></li>
+<li><a href="#edit-the-netd-conf-file">Edit the netd.conf File</a></li>
+<li><a href="#restart-the-netd-service">Restart the netd Service</a></li>
+<li><a href="#back-up-the-configuration-to-a-single-file">Back Up the Configuration to a Single File</a></li>
+<li><a href="#advanced-configuration">Advanced Configuration</a></li>
+</ul></li>
+</ul>
+</nav>
+</aside>
+    
+
+<p>The Network Command Line Utility (NCLU) is a command line interface for Cumulus Networks products that simplifies the networking configuration process for all users.</p>
+
+<p>NCLU resides in the Linux user space and provides consistent access to networking commands directly through bash, making configuration and troubleshooting simple and easy; no need to edit files or enter modes and sub-modes. NCLU:</p>
+
+<ul>
+<li>Embeds help, examples, and automatic command checking with suggestions in case you enter a typo.</li>
+<li>Runs directly from and integrates with bash, while being interoperable with the regular way of accessing underlying configuration files and automation.</li>
+<li>Configures dependent features automatically so that you don’t have to.</li>
+</ul>
+
+<p><img src="../Linux-NCLU-Architecture-2.png" alt="NCLU overview" /></p>
+
+<p>The NCLU wrapper utility called <code>net</code> is capable of configuring layer 2 and layer 3 features of the networking stack, installing ACLs and VXLANs, rolling back and deleting snapshots, as well as providing monitoring and troubleshooting functionality for these features. You can configure both the <code>/etc/network/interfaces</code> and <code>/etc/frr/frr.conf</code> files with <code>net</code>, in addition to running show and clear commands related to <code>ifupdown2</code> and FRRouting.</p>
+
+<h2 id="install-nclu">Install NCLU</h2>
+
+<p>If you upgraded Cumulus Linux from a version earlier than 3.2 instead of performing a full binary install, you need to install the <code>nclu</code> package on your switch:</p>
+
+<pre><code>cumulus@switch:~$ sudo -E apt-get update
+cumulus@switch:~$ sudo -E apt-get install nclu
+cumulus@switch:~$ sudo -E apt-get upgrade
+</code></pre>
+
+<div class="notices note" ><p>The  <code>nclu</code> package installs a new bash completion script and displays the following message:</p>
+
+<pre><code>Setting up nclu (1.0-cl3u3) ...
+To enable the newly installed bash completion for nclu in this shell, execute...
+    source /etc/bash_completion
+</code></pre>
+</div>
+
+
+<h2 id="nclu-basics">NCLU Basics</h2>
+
+<p>Use the following workflow to stage and commit changes to Cumulus Linux with NCLU:</p>
+
+<ol>
+<li>Use the <code>net add</code> and <code>net del</code> commands to stage and remove configuration changes.</li>
+<li>Use the <code>net pending</code> command to review staged changes.</li>
+<li>Use <code>net commit</code> and <code>net abort</code> to commit and delete staged changes.  </li>
+</ol>
+
+<div class="notices note" ><p><code>net commit</code> applies the changes to the relevant configuration files, such as <code>/etc/network/interfaces</code>, then runs necessary follow on commands to enable the configuration, such as <code>ifreload -a</code>.</p>
+
+<p>If two different users try to commit a change at the same time, NCLU displays a warning but implements the change according to the first commit received. The second user will need to abort the commit.</p>
+</div>
+
+
+<p>When you have a running configuration, you can review and update the configuration with the following commands:</p>
+
+<ul>
+<li><code>net show is</code> series of commands for viewing various parts of the network configuration. For example, use <code>net show configuration</code> to view the complete network configuration, <code>net show commit history</code>to view a history of commits using NCLU, and <code>net show bgp</code> to view BGP status.</li>
+<li><code>net clear</code> provides a way to clear <code>net show</code> counters, BGP and OSPF neighbor content, and more.</li>
+<li><code>net rollback</code> provides a mechanism to revert back to an earlier configuration.</li>
+<li><code>net commit confirm</code> requires you to press _Enter_ to commit changes using NCLU. If you run <code>net commit confirm</code> but do not press <em>Enter</em> within 10 seconds, the commit automatically reverts and no changes are made.</li>
+<li><code>net commit permanent</code> retains the <a href="ac:link">ac:link</a><ri:page ri:content-title="Using Snapshots"><a href="ac:plain-text-link-body">ac:plain-text-link-body</a><a href="/ac:plain-text-link-body">/ac:plain-text-link-body</a><a href="/ri:page">/ri:page</a><a href="/ac:link">/ac:link</a>taken when committing the change. Otherwise, the snapshots created from NCLU commands are cleaned up periodically with a snapper cron job. </li>
+<li><code>net commit delete</code> deletes one or more snapshots created when committing changes with NCLU.</li>
+<li><code>net del all</code> deletes all configurations and stops the IEEE 802.1X service.</li>
+</ul>
+
+<div class="notices note" ><p>This command does not remove <a href="ac:link">ac:link</a><ri:page ri:content-title="Management VRF"><a href="ac:plain-text-link-body">ac:plain-text-link-body</a><a href="/ac:plain-text-link-body">/ac:plain-text-link-body</a><a href="/ri:page">/ri:page</a><a href="/ac:link">/ac:link</a>configurations, as NCLU does not interact with eth0 interfaces and management VRF.</p>
+</div>
+
+
+<h3 id="tab-completion-verification-and-inline-help">Tab Completion, Verification, and Inline Help</h3>
+
+<p>In addition to tab completion and partial keyword command identification, NCLU includes verification checks to ensure correct syntax is used. The examples below show the output for incorrect commands:</p>
+
+<pre><code>cumulus@switch:~$ net add bgp router-id 1.1.1.1/32
+ERROR: Command not found
+ 
+Did you mean one of the following?
+ 
+    net add bgp router-id &lt;ipv4&gt;
+        This command is looking for an IP address, not an IP/prefixlen
+ 
+cumulus@switch:~$ net add bgp router-id 1.1.1.1
+cumulus@switch:~$ net add int swp10 mtu &lt;TAB&gt;
+    &lt;552-9216&gt; :
+cumulus@switch:~$ net add int swp10 mtu 9300
+ERROR: Command not found
+  
+Did you mean one of the following?
+    net add interface &lt;interface&gt; mtu &lt;552-9216&gt;
+</code></pre>
+
+<p>NCLU has a comprehensive built in help system. In addition to the net man page, you can use <code>?</code> and <code>help</code> to display available commands:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        net help Output
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>cumulus@switch:~$ net help
+ 
+Usage:
+    # net &lt;COMMAND&gt; [&lt;ARGS&gt;] [help]
+    #
+    # net is a command line utility for networking on Cumulus Linux switches.
+    #
+    # COMMANDS are listed below and have context specific arguments which can
+    # be explored by typing &quot;&lt;TAB&gt;&quot; or &quot;help&quot; anytime while using net.
+    #
+    # Use 'man net' for a more comprehensive overview.
+ 
+ 
+    net abort
+    net commit [verbose] [confirm] [description &lt;wildcard&gt;]
+    net commit delete (&lt;number&gt;|&lt;number-range&gt;)
+    net help [verbose]
+    net pending
+    net rollback (&lt;number&gt;|last)
+    net show commit (history|&lt;number&gt;|&lt;number-range&gt;|last)
+    net show rollback (&lt;number&gt;|last)
+    net show configuration [commands|files|acl|bgp|ospf|ospf6|interface &lt;interface&gt;]
+ 
+ 
+Options:
+ 
+    # Help commands
+    help     : context sensitive information; see section below
+    example  : detailed examples of common workflows
+ 
+ 
+    # Configuration commands
+    add      : add/modify configuration
+    del      : remove configuration
+ 
+ 
+    # Commit buffer commands
+    abort    : abandon changes in the commit buffer
+    commit   : apply the commit buffer to the system
+    pending  : show changes staged in the commit buffer
+    rollback : revert to a previous configuration state
+ 
+ 
+    # Status commands
+    show     : show command output
+    clear    : clear counters, BGP neighbors, etc
+ 
+cumulus@switch:~$ net help bestpath
+The following commands contain keyword(s) 'bestpath'
+ 
+    net (add|del) bgp bestpath as-path multipath-relax [as-set|no-as-set]
+    net (add|del) bgp bestpath compare-routerid
+    net (add|del) bgp bestpath med missing-as-worst
+    net (add|del) bgp vrf &lt;text&gt; bestpath as-path multipath-relax [as-set|no-as-set]
+    net (add|del) bgp vrf &lt;text&gt; bestpath compare-routerid
+    net (add|del) bgp vrf &lt;text&gt; bestpath med missing-as-worst
+    net add bgp debug bestpath &lt;ip/prefixlen&gt;
+    net del bgp debug bestpath [&lt;ip/prefixlen&gt;]
+    net show bgp (&lt;ipv4&gt;|&lt;ipv4/prefixlen&gt;) [bestpath|multipath] [json]
+    net show bgp (&lt;ipv6&gt;|&lt;ipv6/prefixlen&gt;) [bestpath|multipath] [json]
+    net show bgp vrf &lt;text&gt; (&lt;ipv4&gt;|&lt;ipv4/prefixlen&gt;) [bestpath|multipath] [json]
+</code></pre>
+
+<p><a href="../switchd/restart-switchd">plugin:content-inject</a></p>
+
+    </div>
+</div>
+
+<div class="notices note" ><p>You can configure multiple interfaces at once:</p>
+
+<pre><code>cumulus@switch:~$ net add int swp7-9,12,15-17,22 mtu 9216
+</code></pre>
+</div>
+
+
+<h3 id="add-question-mark-ability-to-nclu">Add ? (Question Mark) Ability to NCLU</h3>
+
+<p>While tab completion is enabled by default, you can also configure NCLU to use the <strong>?</strong> (question mark character) to look at available commands. To enable this feature for the _cumulus_ user, open the following file:</p>
+
+<pre><code>cumulus@leaf01:~$ sudo nano ~/.inputrc
+</code></pre>
+
+<p>Uncomment the very last line in the <code>.inputrc</code> file so that the file changes from this:</p>
+
+<pre><code># Uncomment to use ? as an alternative to
+# ?: complete
+</code></pre>
+
+<p>to this:</p>
+
+<pre><code># Uncomment to use ? as an alternative to
+ ?: complete
+</code></pre>
+
+<p>Save the file and reconnect to the switch. The ? (question mark) ability will work on all subsequent sessions on the switch.</p>
+
+<pre><code>cumulus@leaf01:~$ net
+    abort     :  abandon changes in the commit buffer
+    add       :  add/modify configuration
+    clear     :  clear counters, BGP neighbors, etc
+    commit    :  apply the commit buffer to the system
+    del       :  remove configuration
+    example   :  detailed examples of common workflows
+    help      :  Show this screen and exit
+    pending   :  show changes staged in the commit buffer
+    rollback  :  revert to a previous configuration state
+    show      :  show command output
+</code></pre>
+
+<div class="notices note" ><p>When the question mark is typed, NCLU autocompletes and shows all available options, but the question mark does not actually appear on the terminal. This is normal, expected behavior.</p>
+</div>
+
+
+<h3 id="built-in-examples">Built-In Examples</h3>
+
+<p>NCLU has a number of built in examples to guide users through basic configuration setup:</p>
+
+<pre><code>cumulus@switch:~$ net example
+    acl              :  access-list
+    bgp              :  Border Gateway Protocol
+    bond             :  Bond, port-channel, etc
+    bridge           :  A layer2 bridge
+    clag             :  Multi-Chassis Link Aggregation
+    dot1x            :  Configure, Enable, Delete or Show IEEE 802.1X EAPOL
+    link-settings    :  Physical link parameters
+    lnv              :  Lightweight Network Virtualization
+    management-vrf   :  Management VRF
+    mlag             :  Multi-Chassis Link Aggregation
+    ospf             :  Open Shortest Path First (OSPFv2)
+    vlan-interfaces  :  IP interfaces for VLANs
+ 
+cumulus@switch:~$ net example bridge
+ 
+Scenario
+========
+We are configuring switch1 and would like to configure the following
+- configure switch1 as an L2 switch for host-11 and host-12
+- enable vlans 10-20
+- place host-11 in vlan 10
+- place host-12 in vlan 20
+- create an SVI interface for vlan 10
+- create an SVI interface for vlan 20
+- assign IP 10.0.0.1/24 to the SVI for vlan 10
+- assign IP 20.0.0.1/24 to the SVI for vlan 20
+- configure swp3 as a trunk for vlans 10, 11, 12 and 20
+              swp3
+     *switch1 --------- switch2
+        /\
+  swp1 /  \ swp2
+      /    \
+     /      \
+ host-11   host-12
+ 
+switch1 net commands
+====================
+- enable vlans 10-20
+switch1# net add vlan 10-20
+- place host-11 in vlan 10
+- place host-12 in vlan 20
+switch1# net add int swp1 bridge access 10
+switch1# net add int swp2 bridge access 20
+- create an SVI interface for vlan 10
+- create an SVI interface for vlan 20
+- assign IP 10.0.0.1/24 to the SVI for vlan 10
+- assign IP 20.0.0.1/24 to the SVI for vlan 20
+switch1# net add vlan 10 ip address 10.0.0.1/24
+switch1# net add vlan 20 ip address 20.0.0.1/24
+- configure swp3 as a trunk for vlans 10, 11, 12 and 20
+switch1# net add int swp3 bridge trunk vlans 10-12,20
+# Review and commit changes
+switch1# net pending
+switch1# net commit
+ 
+Verification
+============
+switch1# net show interface
+switch1# net show bridge macs
+</code></pre>
+
+<h2 id="configure-user-accounts">Configure User Accounts</h2>
+
+<p>You can configure user accounts in Cumulus Linux with read-only or edit permissions for NCLU:</p>
+
+<ul>
+<li>You create user accounts with <strong>read-only</strong> permissions for NCLU by adding them to the <code>netshow</code> group. A user in the <code>netshow</code> group can run NCLU <code>net show</code> commands, such as <code>net show interface</code> or <code>net show config</code>, and certain general Linux commands, such as <code>ls</code>, <code>cd</code> or  <code>man</code>, but cannot run <code>net add</code>, <code>net del</code> or  <code>net commit</code> commands.</li>
+<li>You create user accounts with <strong>edit</strong> permissions for NCLU by adding them to the <code>netedit</code> group. A user in the <code>netedit</code> group can run NCLU configuration commands, such <code>net add</code>, <code>net del</code> or <code>net commit</code> in addition to NCLU <code>net show</code> commands.</li>
+</ul>
+
+<p>The examples below demonstrate how to add a new user account or modify an existing user account called <em>myuser</em>.</p>
+
+<p>To add a new user account with NCLU show permissions:</p>
+
+<pre><code>cumulus@switch:~$ sudo adduser --ingroup netshow myuser
+Adding user `myuser' ...
+Adding new user `myuser' (1001) with group `netshow' …
+</code></pre>
+
+<p>To add NCLU show permissions to a user account that already exists:</p>
+
+<pre><code>cumulus@switch:~$ sudo addgroup myuser netshow
+Adding user `myuser' to group `netshow' ...
+Adding user myuser to group netshow
+Done
+</code></pre>
+
+<p>To add a new user account with NCLU edit permissions:</p>
+
+<pre><code>cumulus@switch:~$ sudo adduser --ingroup netedit myuser
+Adding user `myuser' ...
+Adding new user `myuser' (1001) with group `netedit' …
+</code></pre>
+
+<p>To add NCLU edit permissions to a user account that already exists:</p>
+
+<pre><code>cumulus@switch:~$ sudo addgroup myuser netedit
+Adding user `myuser' to group `netedit' ...
+Adding user myuser to group netedit
+Done
+</code></pre>
+
+<div class="notices note" ><p>You can use the <code>adduser</code> command for local user accounts only. You can use the <code>addgroup</code> command for both local and remote user accounts. For a remote user account, you must use the mapping username, such as <code>tacacs3</code> or <code>radius_user</code>, not the <a href="ac:link">ac:link</a><ri:page ri:content-title="TACACS Plus"><a href="ac:plain-text-link-body">ac:plain-text-link-body</a><a href="/ac:plain-text-link-body">/ac:plain-text-link-body</a><a href="/ri:page">/ri:page</a><a href="/ac:link">/ac:link</a>or <a href="ac:link">ac:link</a><ri:page ri:content-title="RADIUS AAA"><a href="ac:plain-text-link-body">ac:plain-text-link-body</a><a href="/ac:plain-text-link-body">/ac:plain-text-link-body</a><a href="/ri:page">/ri:page</a><a href="/ac:link">/ac:link</a>account name.</p>
+</div>
+
+
+<p>If the user tries to run commands that are not allowed, the following error displays:</p>
+
+<pre><code>myuser@switch:~$ net add hostname host01
+ERROR: User username does not have permission to make networking changes.
+</code></pre>
+
+<h2 id="edit-the-netd-conf-file">Edit the netd.conf File</h2>
+
+<p>Instead of using the NCLU commands described above, you can manually configure users and groups to be able to run NCLU commands. </p>
+
+<p>Edit the <code>/etc/netd.conf</code> file to add users to the _users_with<em>edit</em> and _users_with<em>show</em> lines in the file, then save the file.</p>
+
+<p>For example, if you want the user <em>netoperator</em> to be able to run both edit and show commands, add the user to the <code>users_with_edit</code> and <code>users_with_show</code> lines in the <code>/etc/netd.conf</code> file:</p>
+
+<pre><code>cumulus@switch:~$ sudo nano /etc/netd.conf
+  
+# Control which users/groups are allowed to run 'add', 'del',
+# 'clear', 'net abort', 'net commit' and restart services
+# to apply those changes
+users_with_edit = root, cumulus, netoperator
+groups_with_edit = root, cumulus
+ 
+ 
+# Control which users/groups are allowed to run 'show' commands
+users_with_show = root, cumulus, netoperator
+groups_with_show = root, cumulus
+</code></pre>
+
+<p>To configure a new user group to use NCLU, add that group to the <code>groups_with_edit</code> and <code>groups_with_show</code> lines in the file.</p>
+
+<div class="notices warning" ><p>Use caution giving edit permissions to groups. For example, don&rsquo;t give edit permissions to the <ac:link ac:anchor="nclu"><ri:page ri:content-title="TACACS Plus"><a href="ac:link-body">ac:link-body</a><em>tacacs</em> group<a href="/ac:link-body">/ac:link-body</a><a href="/ri:page">/ri:page</a><a href="/ac:link">/ac:link</a>.</p>
+</div>
+
+
+<h2 id="restart-the-netd-service">Restart the netd Service</h2>
+
+<p>Whenever you modify <code>netd.conf</code>, you must restart the <code>netd</code> service for the changes to take effect:</p>
+
+<pre><code>cumulus@switch:~$ sudo systemctl restart netd.service
+</code></pre>
+
+<h2 id="back-up-the-configuration-to-a-single-file">Back Up the Configuration to a Single File</h2>
+
+<p>You can easily back up your NCLU configuration to a file by outputting the results of <code>net show configuration commands</code> to a file, then retrieving the contents of the file using the <code>source</code> command. You can then view the configuration at any time or copy it to other switches and use the <code>source</code> command to apply that configuration to those switches. </p>
+
+<p>For example, to copy the configuration of a leaf switch called leaf01, run the following command:</p>
+
+<pre><code>cumulus@leaf01:~$ net show configuration commands &gt;&gt; leaf01.txt
+</code></pre>
+
+<p>With the commands all stored in a single file, you can now copy this file to another ToR switch in your network called leaf01 and apply the configuration by running:</p>
+
+<pre><code>cumulus@leaf01:~$ source leaf01.txt
+</code></pre>
+
+<h2 id="advanced-configuration">Advanced Configuration</h2>
+
+<p>NCLU needs no initial configuration; it is ready to go in Cumulus Linux. However, if you need to modify its configuration, you must manually update the <code>/etc/netd.conf</code> file. You can configure this file to allow different permission levels for users to edit configurations and run <code>show</code> commands. It also contains a blacklist that hides less frequently used terms from the tabbed autocomplete. </p>
+
+<table>
+<thead>
+<tr>
+<th>Configuration Variable</th>
+<th>Default Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>show_linux_command</td>
+<td>False</td>
+<td>When true, displays the Linux command running in the background.</td>
+</tr>
+
+<tr>
+<td>enable_ifupdown2</td>
+<td>True</td>
+<td>Enables <code>net</code> wrapping of <code>ifupdown2</code> commands.</td>
+</tr>
+
+<tr>
+<td>enable_frr</td>
+<td>True</td>
+<td>Enables <code>net</code> wrapping of FRRouting commands.</td>
+</tr>
+
+<tr>
+<td>users_with_edit</td>
+<td>root, cumulus</td>
+<td>Sets the Linux users with root edit privileges.</td>
+</tr>
+
+<tr>
+<td>groups_with_edit</td>
+<td>root, cumulus</td>
+<td>Sets the Linux groups with root edit privileges.</td>
+</tr>
+
+<tr>
+<td>users_with_show</td>
+<td>root, cumulus</td>
+<td>Controls which users are allowed to run <code>show</code> commands.</td>
+</tr>
+
+<tr>
+<td>groups_with_show</td>
+<td>root, cumulus</td>
+<td>Controls which groups are allowed to run <code>show</code> commands.</td>
+</tr>
+
+<tr>
+<td>ifupdown_blacklist</td>
+<td>address-purge, bond-ad-actor-sys-prio, bond-ad-actor-system, bond-mode, bond-num-grat-arp, bond-num-unsol-na, bond-use-carrier, bond-xmit-hash-policy, bridge-bridgeprio, bridge-fd, bridge-hashel, bridge-hashmax, bridge-hello, bridge-maxage, bridge-maxwait, bridge-mclmc, bridge-mclmi, bridge-mcmi, bridge-mcqi, bridge-mcqpi, bridge-mcqri, bridge-mcrouter, bridge-mcsqc, bridge-mcsqi, bridge-pathcosts, bridge-port-pvids, bridge-port-vids, bridge-portprios, bridge-stp, bridge-waitport, broadcast, hwaddress, link-type, mstpctl-ageing, mstpctl-fdelay, mstpctl-forcevers, mstpctl-hello, mstpctl-maxage, mstpctl-maxhops, mstpctl-portp2p, mstpctl-portpathcost, mstpctl-portrestrrole, mstpctl-portrestrtcn, mstpctl-treeportcost, mstpctl-treeportprio, mstpctl-txholdcount, netmask, preferred-lifetime, scope, vxlan-ageing, vxlan-learning, up, down, bridge-ageing, bridge-gcint, bridge-mcqifaddr, bridge-mcqv4src</td>
+<td>Hides corner case command options from tab complete, to simplify and streamline output.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="notices info" ><p><code>net</code> provides an environment variable to set where the <code>net</code> output is directed. To only use <code>stdout</code>, set the <code>NCLU_TAB_STDOUT</code> environment variable to <em>true</em>. The value is not case sensitive.</p>
+</div>
+
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/cumulus-linux/system-configuration/" title="System Configuration"> <i class="fa fa-chevron-left"></i><label>System Configuration</label></a>
+    <a class="nav nav-next" href="/cumulus-linux/system-configuration/switchd/" title="switchd" style="margin-right: 0px;"><label>switchd</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 08/11/2018
+    </div>
+    
+
+    
+  </div>
+
+
+	<div>
+
+
+  
+    <hr />
+
+<p><a href="//CumulusNetworks.com/"><img src="https://cumulusnetworks.com/static/images/shared/cumulus-networks-logo-gray-dark.svg" width="200"></a></p>
+
+<p>© <script type="text/javascript">document.write(new Date().getFullYear());</script> Cumulus Networks.<br>Bringing web-scale networking to the enterprise cloud.</p>
+
+<table>
+<thead>
+<tr>
+<th>Products</th>
+<th>Learn</th>
+<th>About</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a href="https://cumulusnetworks.com/products/cumulus-linux/">Cumulus Linux</a><br /><a href="https://cumulusnetworks.com/products/netq/">NetQ</a><br /><a href="https://cumulusnetworks.com/products/host-pack">Host Pack</a><br /><a href="https://cumulusnetworks.com/products/cumulus-express">Cumulus Express</a> <br />&nbsp;</td>
+<td><a href="https://cumulusnetworks.com/learn/web-scale-networking-education/">Going web-scale</a><br /><a href="https://cumulusnetworks.com/learn/events/">Events</a><br /> <a href="https://cumulusnetworks.com/blog/">Blog</a><br />&nbsp;<br />&nbsp;</td>
+<td><a href="https://cumulusnetworks.com/about/">Our story</a><br /><a href="https://cumulusnetworks.com/about/careers/">Careers</a><br /><a href="https://cumulusnetworks.com/about/media-coverage/">Media coverage</a><br /><a href="http://docs.cumulusnetworks.com/">Tech docs</a><br /><a href="https://cumulusnetworks.com/community/">Community</a></td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="//twitter.com/CumulusNetworks/"><img src="https://cumulusnetworks.com/static/images/icons/hexagon-twitter.png" width="32"></a> ・ <a href="//www.facebook.com/CumulusNetworks/"><img src="https://cumulusnetworks.com/static/images/icons/hexagon-facebook.png" width="32"></a> ・ <a href="//linkedin.com/company/cumulus-networks/"><img src="https://cumulusnetworks.com/static/images/icons/hexagon-linkedin.png" width="32"></a> ・ <a href="//vimeo.com/CumulusNetworks/"><img src="https://cumulusnetworks.com/static/images/icons/hexagon-vimeo.png" width="32"></a> ・ <a href="//www.github.com/cumulusnetworks/"><img src="https://cumulusnetworks.com/static/images/icons/hexagon-git.png" width="32"></a> ・ <a href="//slack.cumulusnetworks.com/"><img src="https://cumulusnetworks.com/static/images/icons/hexagon-slack.png" width="32"></a></p>
+
+<hr />
+
+<p><a href="https://cumulusnetworks.com/legal/trademarks/">Trademarks</a> ・ <a href="https://cumulusnetworks.com/legal/privacy/">Privacy</a> ・ <a href="https://cumulusnetworks.com/legal/">Terms of service</a></p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>
